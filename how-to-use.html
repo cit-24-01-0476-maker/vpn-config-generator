@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - VPN Configuration Generator Setup Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">V</div>
+                    <span>VPN Config</span>
+                </a>
+                
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="generator.html" class="nav-link">Generator</a></li>
+                    <li><a href="free-vpn.html" class="nav-link">Free VPN</a></li>
+                    <li><a href="how-to-use.html" class="nav-link active">How to Use</a></li>
+                    <li><a href="terms.html" class="nav-link">Terms</a></li>
+                    <li class="nav-cta">
+                        <a href="generator.html" class="btn btn-primary">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="page-content">
+        <div class="container-small">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">How to Use VPN Configs</h1>
+                <p class="page-subtitle">Complete setup guides for all platforms</p>
+            </div>
+
+            <!-- Platform Selection -->
+            <div class="card">
+                <h2 class="card-title">📱 Choose Your Platform</h2>
+                <div class="platforms-grid">
+                    <a href="#windows" class="platform-item">
+                        <div class="platform-icon">🪟</div>
+                        <h4>Windows</h4>
+                        <p>10 & 11</p>
+                    </a>
+                    <a href="#mac" class="platform-item">
+                        <div class="platform-icon">🍎</div>
+                        <h4>macOS</h4>
+                        <p>11+</p>
+                    </a>
+                    <a href="#linux" class="platform-item">
+                        <div class="platform-icon">🐧</div>
+                        <h4>Linux</h4>
+                        <p>Ubuntu/Debian</p>
+                    </a>
+                    <a href="#ios" class="platform-item">
+                        <div class="platform-icon">📱</div>
+                        <h4>iOS</h4>
+                        <p>iPhone/iPad</p>
+                    </a>
+                    <a href="#android" class="platform-item">
+                        <div class="platform-icon">🤖</div>
+                        <h4>Android</h4>
+                        <p>Mobile</p>
+                    </a>
+                    <a href="#router" class="platform-item">
+                        <div class="platform-icon">📡</div>
+                        <h4>Router</h4>
+                        <p>Advanced</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Windows Guide -->
+            <div class="card" id="windows">
+                <h2 class="card-title">🪟 Windows Setup Guide</h2>
+                
+                <div class="instruction-section">
+                    <h3>For WireGuard on Windows:</h3>
+                    <p><strong>Step 1: Download WireGuard Client</strong></p>
+                    <ul>
+                        <li>Visit the official WireGuard website: <a href="https://www.wireguard.com/install/" target="_blank" style="color: var(--color-primary);">wireguard.com/install</a></li>
+                        <li>Download "WireGuard Installer for Windows"</li>
+                        <li>Run the installer and follow the installation wizard</li>
+                    </ul>
+
+                    <p><strong>Step 2: Import Configuration</strong></p>
+                    <ul>
+                        <li>Open the WireGuard application</li>
+                        <li>Click "Import tunnel(s) from file"</li>
+                        <li>Select your downloaded <code>.conf</code> file</li>
+                        <li>The tunnel will appear in the left sidebar</li>
+                    </ul>
+
+                    <p><strong>Step 3: Connect to VPN</strong></p>
+                    <ul>
+                        <li>Click on your tunnel name in the sidebar</li>
+                        <li>Click the "Activate" button</li>
+                        <li>Wait for the status to show "Active"</li>
+                        <li>You're now connected securely!</li>
+                    </ul>
+                </div>
+
+                <div class="instruction-section">
+                    <h3>For OpenVPN on Windows:</h3>
+                    <p><strong>Step 1: Download OpenVPN Client</strong></p>
+                    <ul>
+                        <li>Download OpenVPN GUI from: <a href="https://openvpn.net/community-downloads/" target="_blank" style="color: var(--color-primary);">openvpn.net</a></li>
+                        <li>Install the application with administrator privileges</li>
+                    </ul>
+
+                    <p><strong>Step 2: Import Configuration</strong></p>
+                    <ul>
+                        <li>Right-click the OpenVPN GUI icon in the system tray</li>
+                        <li>Select "Import" → "Import file..."</li>
+                        <li>Choose your <code>.ovpn</code> file</li>
+                        <li>The profile will be added to your connection list</li>
+                    </ul>
+
+                    <p><strong>Step 3: Connect</strong></p>
+                    <ul>
+                        <li>Right-click the OpenVPN icon again</li>
+                        <li>Select your imported profile</li>
+                        <li>Click "Connect"</li>
+                        <li>Wait for the green connection indicator</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- macOS Guide -->
+            <div class="card" id="mac">
+                <h2 class="card-title">🍎 macOS Setup Guide</h2>
+                
+                <div class="instruction-section">
+                    <h3>For WireGuard on macOS:</h3>
+                    <p><strong>Step 1: Install WireGuard</strong></p>
+                    <ul>
+                        <li>Open the Mac App Store</li>
+                        <li>Search for "WireGuard"</li>
+                        <li>Download and install the official WireGuard app</li>
+                        <li>Or use Homebrew: <code>brew install wireguard-tools</code></li>
+                    </ul>
+
+                    <p><strong>Step 2: Import Configuration</strong></p>
+                    <ul>
+                        <li>Open WireGuard from Applications</li>
+                        <li>Click "Import tunnel(s) from file..."</li>
+                        <li>Navigate to your <code>.conf</code> file</li>
+                        <li>Click "Open" to import</li>
+                    </ul>
+
+                    <p><strong>Step 3: Activate VPN</strong></p>
+                    <ul>
+                        <li>Select your imported tunnel</li>
+                        <li>Click the toggle switch to "Activate"</li>
+                        <li>Grant permission when macOS asks</li>
+                        <li>You're now protected!</li>
+                    </ul>
+                </div>
+
+                <div class="instruction-section">
+                    <h3>For OpenVPN on macOS:</h3>
+                    <p><strong>Step 1: Install Tunnelblick</strong></p>
+                    <ul>
+                        <li>Download Tunnelblick from: <a href="https://tunnelblick.net/downloads.html" target="_blank" style="color: var(--color-primary);">tunnelblick.net</a></li>
+                        <li>Open the DMG file and drag to Applications</li>
+                        <li>Launch Tunnelblick and grant necessary permissions</li>
+                    </ul>
+
+                    <p><strong>Step 2: Add Configuration</strong></p>
+                    <ul>
+                        <li>Double-click your <code>.ovpn</code> file</li>
+                        <li>Tunnelblick will automatically import it</li>
+                        <li>Choose whether to install for all users or just you</li>
+                    </ul>
+
+                    <p><strong>Step 3: Connect</strong></p>
+                    <ul>
+                        <li>Click the Tunnelblick icon in the menu bar</li>
+                        <li>Select your configuration</li>
+                        <li>Click "Connect"</li>
+                        <li>Enter credentials if prompted</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Linux Guide -->
+            <div class="card" id="linux">
+                <h2 class="card-title">🐧 Linux Setup Guide</h2>
+                
+                <div class="instruction-section">
+                    <h3>For WireGuard on Ubuntu/Debian:</h3>
+                    <p><strong>Step 1: Install WireGuard</strong></p>
+                    <ul>
+                        <li>Open Terminal</li>
+                        <li>Update package list: <code>sudo apt update</code></li>
+                        <li>Install WireGuard: <code>sudo apt install wireguard</code></li>
+                    </ul>
+
+                    <p><strong>Step 2: Copy Configuration</strong></p>
+                    <ul>
+                        <li>Move your config to WireGuard directory:<br>
+                        <code>sudo cp yourconfig.conf /etc/wireguard/wg0.conf</code></li>
+                        <li>Set proper permissions:<br>
+                        <code>sudo chmod 600 /etc/wireguard/wg0.conf</code></li>
+                    </ul>
+
+                    <p><strong>Step 3: Start VPN</strong></p>
+                    <ul>
+                        <li>Start the tunnel: <code>sudo wg-quick up wg0</code></li>
+                        <li>Check status: <code>sudo wg show</code></li>
+                        <li>To stop: <code>sudo wg-quick down wg0</code></li>
+                        <li>Enable at boot: <code>sudo systemctl enable wg-quick@wg0</code></li>
+                    </ul>
+                </div>
+
+                <div class="instruction-section">
+                    <h3>For OpenVPN on Ubuntu/Debian:</h3>
+                    <p><strong>Step 1: Install OpenVPN</strong></p>
+                    <ul>
+                        <li>Open Terminal</li>
+                        <li>Run: <code>sudo apt update</code></li>
+                        <li>Install: <code>sudo apt install openvpn</code></li>
+                    </ul>
+
+                    <p><strong>Step 2: Connect Using Configuration</strong></p>
+                    <ul>
+                        <li>Navigate to your config directory</li>
+                        <li>Run: <code>sudo openvpn --config yourconfig.ovpn</code></li>
+                        <li>Or use Network Manager for GUI support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- iOS Guide -->
+            <div class="card" id="ios">
+                <h2 class="card-title">📱 iOS Setup Guide (iPhone/iPad)</h2>
+                
+                <div class="instruction-section">
+                    <h3>For WireGuard on iOS:</h3>
+                    <p><strong>Step 1: Install WireGuard App</strong></p>
+                    <ul>
+                        <li>Open the App Store on your iPhone/iPad</li>
+                        <li>Search for "WireGuard"</li>
+                        <li>Download the official WireGuard app (free)</li>
+                    </ul>
+
+                    <p><strong>Step 2: Import Configuration</strong></p>
+                    <ul>
+                        <li>Open the WireGuard app</li>
+                        <li>Tap the "+" button</li>
+                        <li>Choose "Create from file or archive"</li>
+                        <li>Select your <code>.conf</code> file from Files/iCloud</li>
+                        <li>Alternatively, use "Create from QR code" if you have one</li>
+                    </ul>
+
+                    <p><strong>Step 3: Connect</strong></p>
+                    <ul>
+                        <li>Tap the toggle switch next to your tunnel name</li>
+                        <li>Allow VPN configuration when iOS prompts</li>
+                        <li>The switch turns green when connected</li>
+                    </ul>
+                </div>
+
+                <div class="instruction-section">
+                    <h3>For OpenVPN on iOS:</h3>
+                    <p><strong>Step 1: Install OpenVPN Connect</strong></p>
+                    <ul>
+                        <li>Download "OpenVPN Connect" from the App Store</li>
+                        <li>It's the official OpenVPN client</li>
+                    </ul>
+
+                    <p><strong>Step 2: Import Profile</strong></p>
+                    <ul>
+                        <li>Save your <code>.ovpn</code> file to iCloud Drive or Files</li>
+                        <li>Open the file - it will launch OpenVPN Connect</li>
+                        <li>Tap "Add" to import the profile</li>
+                    </ul>
+
+                    <p><strong>Step 3: Connect</strong></p>
+                    <ul>
+                        <li>Open OpenVPN Connect</li>
+                        <li>Toggle the switch for your profile</li>
+                        <li>Allow VPN permissions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Android Guide -->
+            <div class="card" id="android">
+                <h2 class="card-title">🤖 Android Setup Guide</h2>
+                
+                <div class="instruction-section">
+                    <h3>For WireGuard on Android:</h3>
+                    <p><strong>Step 1: Install WireGuard App</strong></p>
+                    <ul>
+                        <li>Open Google Play Store</li>
+                        <li>Search for "WireGuard"</li>
+                        <li>Install the official WireGuard app by WireGuard Development Team</li>
+                    </ul>
+
+                    <p><strong>Step 2: Import Configuration</strong></p>
+                    <ul>
+                        <li>Open the WireGuard app</li>
+                        <li>Tap the "+" button (bottom right)</li>
+                        <li>Select "Import from file or archive"</li>
+                        <li>Navigate to your downloaded <code>.conf</code> file</li>
+                        <li>Or scan a QR code if available</li>
+                    </ul>
+
+                    <p><strong>Step 3: Activate VPN</strong></p>
+                    <ul>
+                        <li>Tap the toggle switch next to your tunnel</li>
+                        <li>Allow VPN connection when Android prompts</li>
+                        <li>You'll see a key icon in the status bar when connected</li>
+                    </ul>
+                </div>
+
+                <div class="instruction-section">
+                    <h3>For OpenVPN on Android:</h3>
+                    <p><strong>Step 1: Install OpenVPN for Android</strong></p>
+                    <ul>
+                        <li>Download "OpenVPN for Android" from Play Store</li>
+                        <li>Developed by Arne Schwabe (official client)</li>
+                    </ul>
+
+                    <p><strong>Step 2: Import Profile</strong></p>
+                    <ul>
+                        <li>Tap the "+" icon</li>
+                        <li>Select "Import"</li>
+                        <li>Choose "Import Profile from SD card"</li>
+                        <li>Select your <code>.ovpn</code> file</li>
+                    </ul>
+
+                    <p><strong>Step 3: Connect</strong></p>
+                    <ul>
+                        <li>Tap on the imported profile</li>
+                        <li>Tap "Connect"</li>
+                        <li>Grant VPN permissions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Router Guide -->
+            <div class="card" id="router">
+                <h2 class="card-title">📡 Router Setup Guide (Advanced)</h2>
+                
+                <div class="instruction-section">
+                    <h3>Setting Up VPN on Your Router:</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                        <strong>Note:</strong> Router configuration varies by manufacturer and model. These are general guidelines.
+                    </p>
+
+                    <p><strong>Compatible Routers:</strong></p>
+                    <ul>
+                        <li>DD-WRT compatible routers</li>
+                        <li>Tomato firmware routers</li>
+                        <li>ASUS routers with Merlin firmware</li>
+                        <li>pfSense/OPNsense systems</li>
+                        <li>MikroTik routers</li>
+                    </ul>
+
+                    <p><strong>General Steps:</strong></p>
+                    <ul>
+                        <li>Access your router's admin panel (usually 192.168.1.1)</li>
+                        <li>Navigate to VPN settings</li>
+                        <li>Select WireGuard or OpenVPN (depending on support)</li>
+                        <li>Import or paste your configuration</li>
+                        <li>Save and restart the VPN service</li>
+                        <li>All devices on your network will use the VPN</li>
+                    </ul>
+
+                    <p><strong>Benefits of Router-Level VPN:</strong></p>
+                    <ul>
+                        <li>✓ Protects all devices automatically</li>
+                        <li>✓ No need to configure each device individually</li>
+                        <li>✓ Covers smart home devices and IoT</li>
+                        <li>✓ Gaming consoles and smart TVs protected</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="card">
+                <h2 class="card-title">🔧 Troubleshooting</h2>
+                
+                <div class="instruction-section">
+                    <h3>Common Issues & Solutions:</h3>
+                    
+                    <p><strong>Can't connect to VPN:</strong></p>
+                    <ul>
+                        <li>Check your internet connection</li>
+                        <li>Verify the configuration file is not corrupted</li>
+                        <li>Try a different server location</li>
+                        <li>Disable firewall temporarily to test</li>
+                        <li>Regenerate your configuration file</li>
+                    </ul>
+
+                    <p><strong>VPN connects but no internet:</strong></p>
+                    <ul>
+                        <li>Check DNS settings in your configuration</li>
+                        <li>Try changing DNS provider (Cloudflare, Google, etc.)</li>
+                        <li>Verify your firewall isn't blocking VPN traffic</li>
+                        <li>Restart your device</li>
+                    </ul>
+
+                    <p><strong>Slow connection speeds:</strong></p>
+                    <ul>
+                        <li>Try a server closer to your location</li>
+                        <li>Switch between UDP and TCP (OpenVPN)</li>
+                        <li>For OpenVPN, try ChaCha20 encryption</li>
+                        <li>Consider upgrading to a premium plan</li>
+                    </ul>
+
+                    <p><strong>VPN disconnects frequently:</strong></p>
+                    <ul>
+                        <li>Check if your ISP is blocking VPN traffic</li>
+                        <li>Try switching protocols (WireGuard ↔ OpenVPN)</li>
+                        <li>Adjust MTU settings in advanced configuration</li>
+                        <li>Use TCP instead of UDP for more stability</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="cta-box">
+                <h2>Ready to Get Started?</h2>
+                <p>Generate your VPN configuration and follow the guide for your platform</p>
+                <a href="generator.html" class="btn btn-white btn-lg">Generate Configuration</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="logo-icon">V</div>
+                        <span>VPN Config</span>
+                    </div>
+                    <p class="footer-about">Free and secure VPN configuration generator for WireGuard and OpenVPN protocols.</p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="generator.html">Generator</a></li>
+                        <li><a href="free-vpn.html">Free VPN</a></li>
+                        <li><a href="how-to-use.html">How to Use</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="terms.html">Terms & Privacy</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-to-use.html#windows">Windows Guide</a></li>
+                        <li><a href="how-to-use.html#mac">macOS Guide</a></li>
+                        <li><a href="how-to-use.html#linux">Linux Guide</a></li>
+                        <li><a href="how-to-use.html#mobile">Mobile Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 VPN Config Generator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
